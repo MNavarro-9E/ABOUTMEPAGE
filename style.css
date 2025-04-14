@@ -1,0 +1,264 @@
+body {
+  background-color: #718c9a;
+  display: block;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.rectangle-2 * {
+  box-sizing: border-box;
+}
+.rectangle-2 {
+  background: #d9d9d9;
+  border-radius: 208.5px;
+  height: 165px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.image-1, .image-2 {
+  border-radius: 56px;
+  width: 116px;
+  height: 116px;
+  object-fit: cover;
+  margin-left: 10px;
+  transition: opacity 0.3s ease-in-out, border 0.3s ease;
+  opacity: 1;
+}
+.age {
+  font-family: 'minecraft', sans-serif;
+  margin-left: 40px;
+  font-size: 65px;
+}
+.desc3, .desc4 {
+  font-family: 'minecraft', sans-serif;
+  font-size: 30px;
+  margin-left: 40px;
+  transition: opacity 0.5s ease-in-out;
+}
+.dni, .extras {
+  box-sizing: border-box;
+  background-color: #7c7b87;
+  border-radius: 92px;
+  border: solid 4px white;
+  width: 250px;
+  height: 150px;
+  position: relative;
+  font-size: 25px;
+  margin-left: 40px;
+  font-family: 'minecraft', sans-serif;
+  transition: background-color 0.5s ease;
+}
+.dni:hover, .extras:hover {
+  background-color: rgb(92, 101, 125);
+}
+.user {
+  color: #45445b;
+  font-family: 'minecraft', sans-serif;
+  font-size: 86px;
+  height: 112px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  padding-right: 20px;
+  margin-left: auto;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+@font-face {
+  font-family: "minecraft";
+  src: url("fonts/Minecraft.ttf") format("truetype");
+}
+.password * {
+  box-sizing: border-box;
+}
+.password {
+  color: #f8f8fb;
+  text-align: left;
+  font-family: "minecraft", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  position: relative;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+.form-group {
+  position: relative;
+}
+.form-control {
+  background: #d9d9d9;
+  border-radius: 91px;
+  height: 50px;
+  width: 100%;
+  padding-left: 20px;
+  border: none;
+  font-size: 18px;
+}
+.form-control:focus {
+  outline: none;
+}
+.rectangle-5 {
+  background: #d9d9d9;
+  border-radius: 94px;
+  height: 121px;
+  width: 450px;
+  margin-left: 40px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.label .text-wrapper {
+  text-align: center;
+  font-family: "minecraft", sans-serif;
+  font-weight: 400;
+  color: #27272b;
+  font-size: 64px;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+.box-wrap {
+  width: 1241px;
+  height: 700px;
+  background-color: #27272b;
+  border-radius: 41px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+.about-section {
+  display: none;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+.about-section.visible {
+  display: block;
+  opacity: 1;
+}
+.line-1 {
+  height: 5px;
+  background-color: white;
+  width: 0;
+  margin-top: 120px;
+  animation: lineGrow 1s ease-out forwards;
+}
+@keyframes lineGrow {
+  to {
+    width: 700px;
+  }
+}
+.desc {
+  background-color: rgb(206, 212, 222);
+  width: 1218px;
+  height: auto;
+  min-height: 480px;
+  border-radius: 41px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  box-sizing: border-box;
+}
+.mouse-trail {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/012/658/364/small_2x/heart-shaped-love-icon-symbol-for-pictogram-app-website-logo-or-graphic-design-element-pixel-art-style-illustration-format-png.png');
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.7;
+  transform: translate(-50%, -50%);
+  animation: fadeOut 0.5s linear forwards;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+/* ✅ Responsive stuff */
+@media screen and (max-width: 768px) {
+  .rectangle-2 {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .image-1,
+  .image-2 {
+    margin: 10px 0;
+    width: 100px;
+    height: 100px;
+  }
+
+  .user {
+    font-size: 8vw;
+    padding-right: 0;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .password {
+    font-size: 8vw;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .rectangle-5 {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .label .text-wrapper {
+    font-size: 7vw;
+  }
+
+  .desc {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .box-wrap {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .age, .desc3, .desc4 {
+    font-size: 6vw;
+    margin-left: 20px;
+  }
+
+  .dni, .extras {
+    width: 100%;
+    height: auto;
+    font-size: 5vw;
+    margin: 10px 0;
+  }
+}
